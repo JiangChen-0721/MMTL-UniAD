@@ -22,7 +22,7 @@ from prettytable import PrettyTable
 from torch.optim import *
 from torchvision.transforms import *
 from Attention import BiLevelRoutingAttention,GLIBlock 
-from Fusion import DBME, ECAAttention
+from Fusion import DBME
 
 # 设置 max_split_size_mb 为256MB
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'max_split_size_mb:512'
@@ -550,6 +550,51 @@ def HVAttention(pretrained=False, **kwargs):
     return model
 
 
+class AxialSpatialRefine(nn.Module):
+    """Axial attention along height then width (for 14×14, 512-channel maps)."""
+
+    def __init__(self, dim=512, spatial=14, groups=8):
+        super().__init__()
+        self.bn = nn.BatchNorm2d(dim)
+        self.relu = nn.ReLU(inplace=True)
+        self.axial_h = AxialAttention(dim, dim, groups=groups, kernel_size=spatial)
+        self.axial_w = AxialAttention(dim, dim, groups=groups, kernel_size=spatial, width=True)
+        self.bn_out = nn.BatchNorm2d(dim)
+
+    def forward(self, x):
+        identity = x
+        out = self.relu(self.bn(x))
+        out = self.axial_h(out)
+        out = self.axial_w(out)
+        out = self.bn_out(out)
+        return identity + out
+
+
+class FusedVecSpatialCrossAttn(nn.Module):
+    """
+    Cross-attention: query = pooled DBME vector (B, C);
+    key/value = flattened x_all_final (B, HW, C).
+    """
+
+    def __init__(self, dim=512, num_heads=8):
+        super().__init__()
+        assert dim % num_heads == 0
+        self.mha = nn.MultiheadAttention(dim, num_heads, batch_first=True)
+        self.q_norm = nn.LayerNorm(dim)
+        self.kv_norm = nn.LayerNorm(dim)
+        self.out_norm = nn.LayerNorm(dim)
+
+    def forward(self, fused_vec, spatial_map):
+        # fused_vec: (B, C); spatial_map: (B, C, H, W)
+        q = fused_vec.unsqueeze(1)  # (B, 1, C)
+        kv = spatial_map.flatten(2).transpose(1, 2)  # (B, HW, C)
+        q = self.q_norm(q)
+        kv = self.kv_norm(kv)
+        attn_out, _ = self.mha(q, kv, kv)  # (B, 1, C)
+        out = fused_vec.unsqueeze(1) + attn_out
+        return self.out_norm(out).squeeze(1)  # (B, C)
+
+
 class TotalNet(nn.Module):
     def __init__(self):
         super(TotalNet, self).__init__()
@@ -572,31 +617,26 @@ class TotalNet(nn.Module):
 
         self.avg_pool = nn.AdaptiveAvgPool2d(1)
 
-        self.aff_module_for_people_scenes = DBME(channels=512)
-        self.aff_module_for_fused_points = DBME(channels=512)
+        # Four parallel two-stage DBME chains (people↔scenes, then ↔points),
+        # each with its own ECA weights (inside DBME).
+        self.dbme_people_scenes = nn.ModuleList([DBME(channels=512) for _ in range(4)])
+        self.dbme_fused_points = nn.ModuleList([DBME(channels=512) for _ in range(4)])
 
-        self.channel_att1 = ECAAttention(512, 8)
-        self.channel_att2 = ECAAttention(512, 8)
-        self.channel_att3 = ECAAttention(512, 8)
-        self.channel_att4 = ECAAttention(512, 8)
+        # x_all -> axial attention -> bi-level routing (x_all_final)
+        self.axial_x_all = AxialSpatialRefine(512, spatial=14, groups=8)
+        self.route_x_all1 = BiLevelRoutingAttention(512)
+        self.route_x_all2 = BiLevelRoutingAttention(512)
 
+        # Cross attention: each x_fused_finali with x_all_final
+        self.cross_fuse = nn.ModuleList([FusedVecSpatialCrossAttn(512, num_heads=8) for _ in range(4)])
+
+        # Final task heads (each task uses its own fused result)
         self.fc1 = nn.Linear(512, 5)
         self.fc2 = nn.Linear(512, 7)
         self.fc3 = nn.Linear(512, 3)
         self.fc4 = nn.Linear(512, 5)
 
-        self.fc11 = nn.Linear(512, 5)
-        self.fc22 = nn.Linear(512, 7)
-        self.fc33 = nn.Linear(512, 3)
-        self.fc44 = nn.Linear(512, 5)
-
-        self.weight1 = nn.Parameter(torch.tensor(0.5))
-        self.weight2 = nn.Parameter(torch.tensor(0.5))
-        self.weight3 = nn.Parameter(torch.tensor(0.5))
-        self.weight4 = nn.Parameter(torch.tensor(0.5))
-
     def forward(self, img1, img2, img3, img4, face, body, gesture, posture):
-
         # Original feature extraction
         h1 = self.marnet1(self.subnet1(img1))
         h2 = self.marnet2(self.subnet2(img2))
@@ -613,38 +653,29 @@ class TotalNet(nn.Module):
         x_people = h1 + h_face + h_body
         x_scenes = h2 + h3 + h4
         x_points = h_gesture + h_posture
-
         x_all = x_people + x_scenes + x_points
 
-        x1 = self.channel_att1(x_all)
-        x2 = self.channel_att2(x_all)
-        x3 = self.channel_att3(x_all)
-        x4 = self.channel_att4(x_all)
+        # x_all_final for cross attention
+        x_axial = self.axial_x_all(x_all)
+        x_routed = self.route_x_all1(x_axial)
+        x_all_final = self.route_x_all2(x_routed)  # (B, 512, 14, 14)
 
-        x_fused_people_scenes = self.aff_module_for_people_scenes(x_people, x_scenes)
-        x_fused_final = self.aff_module_for_fused_points(x_fused_people_scenes, x_points)
-        x_fused_final = self.avg_pool(x_fused_final).view(x_fused_final.size(0), -1)
+        b = x_all.size(0)
+        xfs = []
+        for i in range(4):
+            x_p_s = self.dbme_people_scenes[i](x_people, x_scenes)
+            x_f = self.dbme_fused_points[i](x_p_s, x_points)
+            x_f = self.avg_pool(x_f).view(b, -1)  # (B, 512)
+            xfs.append(x_f)
 
-        x_1 = self.avg_pool(x1).view(x1.size(0), -1)
-        x_2 = self.avg_pool(x2).view(x2.size(0), -1)
-        x_3 = self.avg_pool(x3).view(x3.size(0), -1)
-        x_4 = self.avg_pool(x4).view(x4.size(0), -1)
+        z = []
+        for i in range(4):
+            z.append(self.cross_fuse[i](xfs[i], x_all_final))  # (B, 512)
 
-        out01 = self.fc1(x_fused_final)
-        out02 = self.fc2(x_fused_final)
-        out03 = self.fc3(x_fused_final)
-        out04 = self.fc4(x_fused_final)
-
-        out11 = self.fc11(x_1)
-        out22 = self.fc22(x_2)
-        out33 = self.fc33(x_3)
-        out44 = self.fc44(x_4)
-
-        out1 = torch.sigmoid(self.weight1) * out01 + (1 - torch.sigmoid(self.weight1)) * out11
-        out2 = torch.sigmoid(self.weight2) * out02 + (1 - torch.sigmoid(self.weight2)) * out22
-        out3 = torch.sigmoid(self.weight3) * out03 + (1 - torch.sigmoid(self.weight3)) * out33
-        out4 = torch.sigmoid(self.weight4) * out04 + (1 - torch.sigmoid(self.weight4)) * out44
-
+        out1 = self.fc1(z[0])
+        out2 = self.fc2(z[1])
+        out3 = self.fc3(z[2])
+        out4 = self.fc4(z[3])
         return out1, out2, out3, out4
 
 
