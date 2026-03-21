@@ -1,0 +1,1 @@
+Epoch: 39, Subepoch: 6, Loss: 1.789272, batch_size: 21, total_acc1: 66.666672,total_acc2: 66.666672, total_acc3: 88.641983, total_acc4: 75.555557,                             avgf11: 0.508400, avgf12: 0.529857, avgf13: 0.781333, avgf14: 0.641800

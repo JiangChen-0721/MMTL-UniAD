@@ -1,0 +1,283 @@
+Epoch: 0, Loss: 4.931004, Overall_average_acc: 57.497345, total_acc1: 56.157116, total_acc2: 49.416138, total_acc3: 67.887474, total_acc4: 56.528664
+Epoch: 0, Loss: 1.194746, Overall_val_acc (precision): 57.962963, total_acc1: 51.851852,total_acc2: 56.049385, total_acc3: 79.506180, total_acc4: 44.444447,                     avgf11: 0.281600, avgf12: 0.303571, avgf13: 0.581667, avgf14: 0.285800, Overall_avgf1: 0.363160
+Epoch: 0,best_precision: 57.962963,lowest_loss: 1.194746,best_avgf1: 0.363160
+train_start_time: 1755537292.3835073, train_end_time: 1755537589.4932017, val_start_time: 1755537589.4941227, val_end_time: 1755537757.797094
+train_time_use: 4.951828241348267 minutes, val_time_use: 2.805049522717794 minutes
+
+Epoch: 1, Loss: 4.352356, Overall_average_acc: 61.464970, total_acc1: 58.811043, total_acc2: 52.919323, total_acc3: 74.203827, total_acc4: 59.925694
+Epoch: 1, Loss: 1.215343, Overall_val_acc (precision): 58.271606, total_acc1: 60.740742,total_acc2: 45.679016, total_acc3: 73.827164, total_acc4: 52.839508,                     avgf11: 0.203200, avgf12: 0.186571, avgf13: 0.457333, avgf14: 0.192000, Overall_avgf1: 0.259776
+Epoch: 1,best_precision: 58.271606,lowest_loss: 1.194746,best_avgf1: 0.363160
+train_start_time: 1755537759.588474, train_end_time: 1755538012.4567468, val_start_time: 1755538012.4572558, val_end_time: 1755538177.3672671
+train_time_use: 4.214471213022867 minutes, val_time_use: 2.748500188191732 minutes
+
+Epoch: 2, Loss: 3.785475, Overall_average_acc: 66.096077, total_acc1: 63.216564, total_acc2: 58.757965, total_acc3: 76.804672, total_acc4: 65.605103
+Epoch: 2, Loss: 0.933007, Overall_val_acc (precision): 66.790131, total_acc1: 62.716053,total_acc2: 57.283955, total_acc3: 81.481483, total_acc4: 65.679016,                     avgf11: 0.268200, avgf12: 0.309429, avgf13: 0.661000, avgf14: 0.325000, Overall_avgf1: 0.390907
+Epoch: 2,best_precision: 66.790131,lowest_loss: 0.933007,best_avgf1: 0.390907
+train_start_time: 1755538179.3856866, train_end_time: 1755538450.178265, val_start_time: 1755538450.178875, val_end_time: 1755538613.7912729
+train_time_use: 4.513209640979767 minutes, val_time_use: 2.726873298486074 minutes
+
+Epoch: 3, Loss: 3.410112, Overall_average_acc: 69.426758, total_acc1: 64.118896, total_acc2: 63.322720, total_acc3: 80.520172, total_acc4: 69.745224
+Epoch: 3, Loss: 0.896727, Overall_val_acc (precision): 68.086426, total_acc1: 64.691360,total_acc2: 60.493832, total_acc3: 82.222229, total_acc4: 64.938278,                     avgf11: 0.364200, avgf12: 0.377571, avgf13: 0.667000, avgf14: 0.352000, Overall_avgf1: 0.440193
+Epoch: 3,best_precision: 68.086426,lowest_loss: 0.896727,best_avgf1: 0.440193
+train_start_time: 1755538615.7119086, train_end_time: 1755538898.4928339, val_start_time: 1755538898.4937518, val_end_time: 1755539094.703044
+train_time_use: 4.713015421231588 minutes, val_time_use: 3.270154869556427 minutes
+
+Epoch: 4, Loss: 3.098373, Overall_average_acc: 72.584930, total_acc1: 65.339706, total_acc2: 66.932060, total_acc3: 83.280258, total_acc4: 74.787689
+Epoch: 4, Loss: 0.890743, Overall_val_acc (precision): 67.716049, total_acc1: 66.172844,total_acc2: 58.271606, total_acc3: 80.987656, total_acc4: 65.432098,                     avgf11: 0.373400, avgf12: 0.347000, avgf13: 0.625000, avgf14: 0.382400, Overall_avgf1: 0.431950
+Epoch: 4,best_precision: 68.086426,lowest_loss: 0.890743,best_avgf1: 0.440193
+train_start_time: 1755539097.1692784, train_end_time: 1755539366.4174306, val_start_time: 1755539366.4179082, val_end_time: 1755539536.7552314
+train_time_use: 4.4874692042668665 minutes, val_time_use: 2.8389553864796957 minutes
+
+Epoch: 5, Loss: 2.925591, Overall_average_acc: 74.389603, total_acc1: 66.135887, total_acc2: 69.426758, total_acc3: 83.970284, total_acc4: 78.025482
+Epoch: 5, Loss: 0.829136, Overall_val_acc (precision): 72.283951, total_acc1: 66.666672,total_acc2: 59.259262, total_acc3: 88.395065, total_acc4: 74.814819,                     avgf11: 0.425800, avgf12: 0.301286, avgf13: 0.779667, avgf14: 0.487800, Overall_avgf1: 0.498638
+Epoch: 5,best_precision: 72.283951,lowest_loss: 0.829136,best_avgf1: 0.498638
+train_start_time: 1755539537.3026059, train_end_time: 1755539828.8290365, val_start_time: 1755539828.8294663, val_end_time: 1755539993.4272316
+train_time_use: 4.858773843447367 minutes, val_time_use: 2.7432960867881775 minutes
+
+Epoch: 6, Loss: 2.804792, Overall_average_acc: 75.265396, total_acc1: 67.303612, total_acc2: 70.010620, total_acc3: 84.872620, total_acc4: 78.874741
+Epoch: 6, Loss: 0.843649, Overall_val_acc (precision): 69.567909, total_acc1: 59.506176,total_acc2: 59.259262, total_acc3: 86.172844, total_acc4: 73.333336,                     avgf11: 0.403000, avgf12: 0.372000, avgf13: 0.757000, avgf14: 0.589200, Overall_avgf1: 0.530300
+Epoch: 6,best_precision: 72.283951,lowest_loss: 0.829136,best_avgf1: 0.530300
+train_start_time: 1755539995.3814514, train_end_time: 1755540269.3135517, val_start_time: 1755540269.314119, val_end_time: 1755540466.2828183
+train_time_use: 4.565535004933675 minutes, val_time_use: 3.2828116536140444 minutes
+
+Epoch: 7, Loss: 2.687553, Overall_average_acc: 75.862534, total_acc1: 66.666672, total_acc2: 70.329094, total_acc3: 86.730362, total_acc4: 79.723999
+Epoch: 7, Loss: 0.808231, Overall_val_acc (precision): 71.481483, total_acc1: 64.938278,total_acc2: 60.740742, total_acc3: 86.666672, total_acc4: 73.580254,                     avgf11: 0.416600, avgf12: 0.342429, avgf13: 0.725333, avgf14: 0.502800, Overall_avgf1: 0.496790
+Epoch: 7,best_precision: 72.283951,lowest_loss: 0.808231,best_avgf1: 0.530300
+train_start_time: 1755540466.2833161, train_end_time: 1755540749.7202096, val_start_time: 1755540749.7208297, val_end_time: 1755540921.8497066
+train_time_use: 4.7239482243855795 minutes, val_time_use: 2.8688146154085796 minutes
+
+Epoch: 8, Loss: 2.569706, Overall_average_acc: 77.322189, total_acc1: 69.055206, total_acc2: 72.770706, total_acc3: 86.464973, total_acc4: 80.997879
+Epoch: 8, Loss: 0.804500, Overall_val_acc (precision): 71.481483, total_acc1: 61.728397,total_acc2: 61.728397, total_acc3: 87.654327, total_acc4: 74.814819,                     avgf11: 0.401800, avgf12: 0.399571, avgf13: 0.782333, avgf14: 0.547000, Overall_avgf1: 0.532676
+Epoch: 8,best_precision: 72.283951,lowest_loss: 0.804500,best_avgf1: 0.532676
+train_start_time: 1755540922.391356, train_end_time: 1755541193.44357, val_start_time: 1755541193.4440768, val_end_time: 1755541390.1284938
+train_time_use: 4.51753689845403 minutes, val_time_use: 3.2780736168225606 minutes
+
+Epoch: 9, Loss: 2.429603, Overall_average_acc: 78.728775, total_acc1: 70.010620, total_acc2: 75.583870, total_acc3: 87.154991, total_acc4: 82.165611
+Epoch: 9, Loss: 0.804091, Overall_val_acc (precision): 71.111115, total_acc1: 62.962967,total_acc2: 62.222225, total_acc3: 87.160500, total_acc4: 72.098770,                     avgf11: 0.484600, avgf12: 0.388286, avgf13: 0.746000, avgf14: 0.553400, Overall_avgf1: 0.543071
+Epoch: 9,best_precision: 72.283951,lowest_loss: 0.804091,best_avgf1: 0.543071
+train_start_time: 1755541390.6419296, train_end_time: 1755541676.7435377, val_start_time: 1755541676.7441916, val_end_time: 1755541853.9415505
+train_time_use: 4.76836013396581 minutes, val_time_use: 2.953289314111074 minutes
+
+Epoch: 10, Loss: 2.260755, Overall_average_acc: 79.750534, total_acc1: 71.019112, total_acc2: 75.371552, total_acc3: 88.747353, total_acc4: 83.864120
+Epoch: 10, Loss: 0.775042, Overall_val_acc (precision): 73.580246, total_acc1: 67.160500,total_acc2: 63.703705, total_acc3: 87.407410, total_acc4: 76.049385,                     avgf11: 0.476400, avgf12: 0.418714, avgf13: 0.720000, avgf14: 0.537600, Overall_avgf1: 0.538179
+Epoch: 10,best_precision: 73.580246,lowest_loss: 0.775042,best_avgf1: 0.543071
+train_start_time: 1755541854.4888613, train_end_time: 1755542121.973751, val_start_time: 1755542121.9744854, val_end_time: 1755542284.1771727
+train_time_use: 4.4580814957618715 minutes, val_time_use: 2.703378121058146 minutes
+
+Epoch: 11, Loss: 2.236383, Overall_average_acc: 80.108818, total_acc1: 72.770706, total_acc2: 75.371552, total_acc3: 88.163490, total_acc4: 84.129517
+Epoch: 11, Loss: 0.792279, Overall_val_acc (precision): 71.296303, total_acc1: 65.432098,total_acc2: 60.987656, total_acc3: 85.432106, total_acc4: 73.333336,                     avgf11: 0.429600, avgf12: 0.367857, avgf13: 0.750333, avgf14: 0.545400, Overall_avgf1: 0.523298
+Epoch: 11,best_precision: 73.580246,lowest_loss: 0.775042,best_avgf1: 0.543071
+train_start_time: 1755542286.4726157, train_end_time: 1755542538.682389, val_start_time: 1755542538.682833, val_end_time: 1755542734.9065197
+train_time_use: 4.203496221701304 minutes, val_time_use: 3.270394778251648 minutes
+
+Epoch: 12, Loss: 2.123207, Overall_average_acc: 81.117310, total_acc1: 72.346077, total_acc2: 77.972404, total_acc3: 89.543526, total_acc4: 84.607224
+Epoch: 12, Loss: 0.773415, Overall_val_acc (precision): 73.148148, total_acc1: 67.160500,total_acc2: 63.703705, total_acc3: 86.666672, total_acc4: 75.061729,                     avgf11: 0.524000, avgf12: 0.459000, avgf13: 0.703333, avgf14: 0.540600, Overall_avgf1: 0.556733
+Epoch: 12,best_precision: 73.580246,lowest_loss: 0.773415,best_avgf1: 0.556733
+train_start_time: 1755542734.9068704, train_end_time: 1755543020.0643287, val_start_time: 1755543020.0650442, val_end_time: 1755543182.6942317
+train_time_use: 4.752624305089315 minutes, val_time_use: 2.7104864597320555 minutes
+
+Epoch: 13, Loss: 2.090459, Overall_average_acc: 81.289818, total_acc1: 74.628456, total_acc2: 76.804672, total_acc3: 88.269646, total_acc4: 85.456482
+Epoch: 13, Loss: 0.833312, Overall_val_acc (precision): 72.345680, total_acc1: 65.185188,total_acc2: 61.481483, total_acc3: 87.407410, total_acc4: 75.308647,                     avgf11: 0.411000, avgf12: 0.373571, avgf13: 0.759667, avgf14: 0.537600, Overall_avgf1: 0.520460
+Epoch: 13,best_precision: 73.580246,lowest_loss: 0.773415,best_avgf1: 0.556733
+train_start_time: 1755543183.225507, train_end_time: 1755543473.3251648, val_start_time: 1755543473.3257747, val_end_time: 1755543669.3551717
+train_time_use: 4.83499429623286 minutes, val_time_use: 3.2671566168467203 minutes
+
+Epoch: 14, Loss: 1.929392, Overall_average_acc: 82.311569, total_acc1: 74.628456, total_acc2: 77.653931, total_acc3: 90.498940, total_acc4: 86.464973
+Epoch: 14, Loss: 0.784913, Overall_val_acc (precision): 72.530861, total_acc1: 67.407410,total_acc2: 61.728397, total_acc3: 86.913582, total_acc4: 74.074074,                     avgf11: 0.483800, avgf12: 0.484286, avgf13: 0.756000, avgf14: 0.597600, Overall_avgf1: 0.580421
+Epoch: 14,best_precision: 73.580246,lowest_loss: 0.773415,best_avgf1: 0.580421
+train_start_time: 1755543669.3555887, train_end_time: 1755543956.6921208, val_start_time: 1755543956.6926107, val_end_time: 1755544154.4381561
+train_time_use: 4.788942201932271 minutes, val_time_use: 3.295759089787801 minutes
+
+Epoch: 15, Loss: 1.789676, Overall_average_acc: 84.195862, total_acc1: 77.441620, total_acc2: 81.740982, total_acc3: 90.605103, total_acc4: 86.995758
+Epoch: 15, Loss: 0.947772, Overall_val_acc (precision): 69.382721, total_acc1: 68.148148,total_acc2: 61.975311, total_acc3: 79.753090, total_acc4: 67.654327,                     avgf11: 0.455600, avgf12: 0.404857, avgf13: 0.674667, avgf14: 0.501000, Overall_avgf1: 0.509031
+Epoch: 15,best_precision: 73.580246,lowest_loss: 0.773415,best_avgf1: 0.580421
+train_start_time: 1755544154.4388192, train_end_time: 1755544448.4982042, val_start_time: 1755544448.498697, val_end_time: 1755544645.2835011
+train_time_use: 4.900989751021068 minutes, val_time_use: 3.2797467350959777 minutes
+
+Epoch: 16, Loss: 1.851911, Overall_average_acc: 83.306793, total_acc1: 77.866249, total_acc2: 80.307861, total_acc3: 89.755844, total_acc4: 85.297241
+Epoch: 16, Loss: 0.793031, Overall_val_acc (precision): 73.765434, total_acc1: 67.901237,total_acc2: 65.679016, total_acc3: 88.888893, total_acc4: 72.592598,                     avgf11: 0.438600, avgf12: 0.455714, avgf13: 0.794333, avgf14: 0.572000, Overall_avgf1: 0.565162
+Epoch: 16,best_precision: 73.765434,lowest_loss: 0.773415,best_avgf1: 0.580421
+train_start_time: 1755544645.283857, train_end_time: 1755544930.7933352, val_start_time: 1755544930.7937856, val_end_time: 1755545128.1992266
+train_time_use: 4.75849130153656 minutes, val_time_use: 3.2900906840960187 minutes
+
+Epoch: 17, Loss: 1.646121, Overall_average_acc: 85.151276, total_acc1: 78.450111, total_acc2: 82.643318, total_acc3: 91.825905, total_acc4: 87.685776
+Epoch: 17, Loss: 0.757417, Overall_val_acc (precision): 73.950623, total_acc1: 65.925926,total_acc2: 66.172844, total_acc3: 87.654327, total_acc4: 76.049385,                     avgf11: 0.515800, avgf12: 0.556857, avgf13: 0.761333, avgf14: 0.577200, Overall_avgf1: 0.602798
+Epoch: 17,best_precision: 73.950623,lowest_loss: 0.757417,best_avgf1: 0.602798
+train_start_time: 1755545130.5543036, train_end_time: 1755545426.3861268, val_start_time: 1755545426.3868046, val_end_time: 1755545590.2120125
+train_time_use: 4.930530385176341 minutes, val_time_use: 2.7304201324780784 minutes
+
+Epoch: 18, Loss: 1.547569, Overall_average_acc: 86.292465, total_acc1: 80.626328, total_acc2: 83.917198, total_acc3: 91.454361, total_acc4: 89.171982
+Epoch: 18, Loss: 0.839553, Overall_val_acc (precision): 73.518524, total_acc1: 67.654327,total_acc2: 63.950619, total_acc3: 88.148155, total_acc4: 74.320992,                     avgf11: 0.512400, avgf12: 0.463143, avgf13: 0.745333, avgf14: 0.558200, Overall_avgf1: 0.569769
+Epoch: 18,best_precision: 73.950623,lowest_loss: 0.757417,best_avgf1: 0.602798
+train_start_time: 1755545592.3364017, train_end_time: 1755545849.462991, val_start_time: 1755545849.4637337, val_end_time: 1755546013.7658484
+train_time_use: 4.285443154970805 minutes, val_time_use: 2.738368578751882 minutes
+
+Epoch: 19, Loss: 1.464628, Overall_average_acc: 87.314224, total_acc1: 81.581749, total_acc2: 84.023361, total_acc3: 93.365189, total_acc4: 90.286629
+Epoch: 19, Loss: 0.820793, Overall_val_acc (precision): 72.962967, total_acc1: 69.382721,total_acc2: 65.185188, total_acc3: 87.901237, total_acc4: 69.382721,                     avgf11: 0.496000, avgf12: 0.526714, avgf13: 0.763667, avgf14: 0.591600, Overall_avgf1: 0.594495
+Epoch: 19,best_precision: 73.950623,lowest_loss: 0.757417,best_avgf1: 0.602798
+train_start_time: 1755546013.766172, train_end_time: 1755546309.643501, val_start_time: 1755546309.644272, val_end_time: 1755546506.9778302
+train_time_use: 4.931288818518321 minutes, val_time_use: 3.288892634709676 minutes
+
+Epoch: 20, Loss: 1.358190, Overall_average_acc: 87.752129, total_acc1: 81.316353, total_acc2: 85.881111, total_acc3: 93.312103, total_acc4: 90.498940
+Epoch: 20, Loss: 0.789199, Overall_val_acc (precision): 72.654327, total_acc1: 69.629631,total_acc2: 62.222225, total_acc3: 83.456795, total_acc4: 75.308647,                     avgf11: 0.584600, avgf12: 0.535143, avgf13: 0.762000, avgf14: 0.623600, Overall_avgf1: 0.626336
+Epoch: 20,best_precision: 73.950623,lowest_loss: 0.757417,best_avgf1: 0.626336
+train_start_time: 1755546506.9782722, train_end_time: 1755546794.3220444, val_start_time: 1755546794.3226624, val_end_time: 1755546992.797055
+train_time_use: 4.789062869548798 minutes, val_time_use: 3.3079065442085267 minutes
+
+Epoch: 21, Loss: 1.231870, Overall_average_acc: 89.238327, total_acc1: 84.447990, total_acc2: 86.199577, total_acc3: 94.002129, total_acc4: 92.303612
+Epoch: 21, Loss: 0.823952, Overall_val_acc (precision): 73.580254, total_acc1: 68.641975,total_acc2: 64.938278, total_acc3: 87.901237, total_acc4: 72.839508,                     avgf11: 0.547000, avgf12: 0.484429, avgf13: 0.801000, avgf14: 0.631400, Overall_avgf1: 0.615957
+Epoch: 21,best_precision: 73.950623,lowest_loss: 0.757417,best_avgf1: 0.626336
+train_start_time: 1755546992.797489, train_end_time: 1755547289.0394058, val_start_time: 1755547289.0399637, val_end_time: 1755547457.88485
+train_time_use: 4.9373652815818785 minutes, val_time_use: 2.8140814383824666 minutes
+
+Epoch: 22, Loss: 1.143326, Overall_average_acc: 89.702766, total_acc1: 84.288750, total_acc2: 86.836525, total_acc3: 94.957542, total_acc4: 92.728241
+Epoch: 22, Loss: 0.938939, Overall_val_acc (precision): 72.901237, total_acc1: 68.888893,total_acc2: 62.222225, total_acc3: 85.432106, total_acc4: 75.061729,                     avgf11: 0.541800, avgf12: 0.404286, avgf13: 0.783667, avgf14: 0.535200, Overall_avgf1: 0.566238
+Epoch: 22,best_precision: 73.950623,lowest_loss: 0.757417,best_avgf1: 0.626336
+train_start_time: 1755547457.8852603, train_end_time: 1755547710.9694154, val_start_time: 1755547710.9697726, val_end_time: 1755547908.5790474
+train_time_use: 4.2180692513783775 minutes, val_time_use: 3.2934879144032796 minutes
+
+Epoch: 23, Loss: 1.155716, Overall_average_acc: 89.410835, total_acc1: 86.199577, total_acc2: 86.358818, total_acc3: 93.949051, total_acc4: 91.135887
+Epoch: 23, Loss: 0.839214, Overall_val_acc (precision): 74.691360, total_acc1: 70.864204,total_acc2: 64.444450, total_acc3: 87.160500, total_acc4: 76.296303,                     avgf11: 0.541000, avgf12: 0.520571, avgf13: 0.794667, avgf14: 0.609000, Overall_avgf1: 0.616310
+Epoch: 23,best_precision: 74.691360,lowest_loss: 0.757417,best_avgf1: 0.626336
+train_start_time: 1755547908.5794396, train_end_time: 1755548196.921096, val_start_time: 1755548196.9215736, val_end_time: 1755548381.9878197
+train_time_use: 4.805694274107615 minutes, val_time_use: 3.084437433878581 minutes
+
+Epoch: 24, Loss: 1.078025, Overall_average_acc: 90.273361, total_acc1: 86.464973, total_acc2: 87.579620, total_acc3: 94.532913, total_acc4: 92.515930
+Epoch: 24, Loss: 0.878599, Overall_val_acc (precision): 75.000000, total_acc1: 70.123459,total_acc2: 65.432098, total_acc3: 87.901237, total_acc4: 76.543213,                     avgf11: 0.513000, avgf12: 0.536429, avgf13: 0.764000, avgf14: 0.575800, Overall_avgf1: 0.597307
+Epoch: 24,best_precision: 75.000000,lowest_loss: 0.757417,best_avgf1: 0.626336
+train_start_time: 1755548384.1368725, train_end_time: 1755548634.198088, val_start_time: 1755548634.1984446, val_end_time: 1755548798.5071943
+train_time_use: 4.16768692334493 minutes, val_time_use: 2.738479161262512 minutes
+
+Epoch: 25, Loss: 0.955185, Overall_average_acc: 91.480896, total_acc1: 87.101913, total_acc2: 89.490448, total_acc3: 95.859879, total_acc4: 93.471344
+Epoch: 25, Loss: 0.989047, Overall_val_acc (precision): 71.790123, total_acc1: 65.185188,total_acc2: 61.234570, total_acc3: 85.679016, total_acc4: 75.061729,                     avgf11: 0.521800, avgf12: 0.521714, avgf13: 0.714667, avgf14: 0.575200, Overall_avgf1: 0.583345
+Epoch: 25,best_precision: 75.000000,lowest_loss: 0.757417,best_avgf1: 0.626336
+train_start_time: 1755548800.5295753, train_end_time: 1755549081.9061387, val_start_time: 1755549081.906567, val_end_time: 1755549245.5475905
+train_time_use: 4.6896093885103864 minutes, val_time_use: 2.727350389957428 minutes
+
+Epoch: 26, Loss: 0.673343, Overall_average_acc: 94.347137, total_acc1: 90.605103, total_acc2: 92.675163, total_acc3: 97.505310, total_acc4: 96.602974
+Epoch: 26, Loss: 0.896932, Overall_val_acc (precision): 74.197533, total_acc1: 68.888893,total_acc2: 67.160500, total_acc3: 86.666672, total_acc4: 74.074074,                     avgf11: 0.581800, avgf12: 0.531714, avgf13: 0.767667, avgf14: 0.624600, Overall_avgf1: 0.626445
+Epoch: 26,best_precision: 75.000000,lowest_loss: 0.757417,best_avgf1: 0.626445
+train_start_time: 1755549245.5478818, train_end_time: 1755549535.2987797, val_start_time: 1755549535.2993188, val_end_time: 1755549732.7526255
+train_time_use: 4.829181631406148 minutes, val_time_use: 3.290888444582621 minutes
+
+Epoch: 27, Loss: 0.558295, Overall_average_acc: 95.514870, total_acc1: 93.736732, total_acc2: 93.895973, total_acc3: 97.717628, total_acc4: 96.709137
+Epoch: 27, Loss: 0.928009, Overall_val_acc (precision): 74.135803, total_acc1: 69.135803,total_acc2: 65.679016, total_acc3: 87.901237, total_acc4: 73.827164,                     avgf11: 0.529200, avgf12: 0.534857, avgf13: 0.768000, avgf14: 0.599600, Overall_avgf1: 0.607914
+Epoch: 27,best_precision: 75.000000,lowest_loss: 0.757417,best_avgf1: 0.626445
+train_start_time: 1755549732.753016, train_end_time: 1755550026.3295152, val_start_time: 1755550026.3299136, val_end_time: 1755550223.3575544
+train_time_use: 4.892941653728485 minutes, val_time_use: 3.2837940136591595 minutes
+
+Epoch: 28, Loss: 0.469449, Overall_average_acc: 96.257965, total_acc1: 94.851387, total_acc2: 94.055206, total_acc3: 98.619965, total_acc4: 97.505310
+Epoch: 28, Loss: 0.964360, Overall_val_acc (precision): 75.432098, total_acc1: 69.382721,total_acc2: 66.913582, total_acc3: 87.901237, total_acc4: 77.530869,                     avgf11: 0.553800, avgf12: 0.536143, avgf13: 0.802333, avgf14: 0.595400, Overall_avgf1: 0.621919
+Epoch: 28,best_precision: 75.432098,lowest_loss: 0.757417,best_avgf1: 0.626445
+train_start_time: 1755550223.3578968, train_end_time: 1755550508.7026384, val_start_time: 1755550508.703256, val_end_time: 1755550672.4065654
+train_time_use: 4.7557456930478414 minutes, val_time_use: 2.7283884922663373 minutes
+
+Epoch: 29, Loss: 0.453479, Overall_average_acc: 96.496819, total_acc1: 95.010620, total_acc2: 94.798309, total_acc3: 98.726120, total_acc4: 97.452232
+Epoch: 29, Loss: 0.975446, Overall_val_acc (precision): 75.617294, total_acc1: 69.629631,total_acc2: 67.654327, total_acc3: 88.148155, total_acc4: 77.037041,                     avgf11: 0.540400, avgf12: 0.534571, avgf13: 0.788000, avgf14: 0.606200, Overall_avgf1: 0.617293
+Epoch: 29,best_precision: 75.617294,lowest_loss: 0.757417,best_avgf1: 0.626445
+train_start_time: 1755550674.4996774, train_end_time: 1755550964.3285296, val_start_time: 1755550964.329023, val_end_time: 1755551128.344564
+train_time_use: 4.830480869611105 minutes, val_time_use: 2.7335923512776694 minutes
+
+Epoch: 30, Loss: 0.416970, Overall_average_acc: 96.589706, total_acc1: 94.373680, total_acc2: 95.435249, total_acc3: 98.460724, total_acc4: 98.089180
+Epoch: 30, Loss: 0.960990, Overall_val_acc (precision): 73.827164, total_acc1: 66.913582,total_acc2: 65.185188, total_acc3: 86.172844, total_acc4: 77.037041,                     avgf11: 0.572400, avgf12: 0.516143, avgf13: 0.761667, avgf14: 0.659800, Overall_avgf1: 0.627502
+Epoch: 30,best_precision: 75.617294,lowest_loss: 0.757417,best_avgf1: 0.627502
+train_start_time: 1755551130.2660398, train_end_time: 1755551415.2949436, val_start_time: 1755551415.2954724, val_end_time: 1755551612.5216045
+train_time_use: 4.7504817287127175 minutes, val_time_use: 3.287102202574412 minutes
+
+Epoch: 31, Loss: 0.374260, Overall_average_acc: 97.027603, total_acc1: 95.276016, total_acc2: 95.541405, total_acc3: 99.256905, total_acc4: 98.036095
+Epoch: 31, Loss: 1.033580, Overall_val_acc (precision): 75.246918, total_acc1: 70.864204,total_acc2: 64.938278, total_acc3: 87.407410, total_acc4: 77.777779,                     avgf11: 0.574800, avgf12: 0.556000, avgf13: 0.772667, avgf14: 0.631400, Overall_avgf1: 0.633717
+Epoch: 31,best_precision: 75.617294,lowest_loss: 0.757417,best_avgf1: 0.633717
+train_start_time: 1755551613.2212665, train_end_time: 1755551907.8573055, val_start_time: 1755551907.8580072, val_end_time: 1755552071.6478863
+train_time_use: 4.910600650310516 minutes, val_time_use: 2.729831318060557 minutes
+
+Epoch: 32, Loss: 0.369283, Overall_average_acc: 97.253189, total_acc1: 95.700645, total_acc2: 95.700645, total_acc3: 99.363060, total_acc4: 98.248413
+Epoch: 32, Loss: 1.026696, Overall_val_acc (precision): 75.308647, total_acc1: 70.370377,total_acc2: 65.679016, total_acc3: 88.148155, total_acc4: 77.037041,                     avgf11: 0.579400, avgf12: 0.520286, avgf13: 0.787000, avgf14: 0.596600, Overall_avgf1: 0.620821
+Epoch: 32,best_precision: 75.617294,lowest_loss: 0.757417,best_avgf1: 0.633717
+train_start_time: 1755552071.6481943, train_end_time: 1755552363.5018268, val_start_time: 1755552363.5023327, val_end_time: 1755552527.8559206
+train_time_use: 4.864227207501729 minutes, val_time_use: 2.7392264644304913 minutes
+
+Epoch: 33, Loss: 0.340922, Overall_average_acc: 97.531853, total_acc1: 96.284508, total_acc2: 96.231430, total_acc3: 98.991516, total_acc4: 98.619965
+Epoch: 33, Loss: 1.059857, Overall_val_acc (precision): 75.370377, total_acc1: 70.617287,total_acc2: 68.148148, total_acc3: 87.160500, total_acc4: 75.555557,                     avgf11: 0.582000, avgf12: 0.558143, avgf13: 0.753667, avgf14: 0.577400, Overall_avgf1: 0.617802
+Epoch: 33,best_precision: 75.617294,lowest_loss: 0.757417,best_avgf1: 0.633717
+train_start_time: 1755552527.8565128, train_end_time: 1755552811.7948303, val_start_time: 1755552811.7952557, val_end_time: 1755552988.089495
+train_time_use: 4.732305292288462 minutes, val_time_use: 2.9382373213768007 minutes
+
+Epoch: 34, Loss: 0.309190, Overall_average_acc: 97.757431, total_acc1: 96.496819, total_acc2: 96.125267, total_acc3: 99.469223, total_acc4: 98.938431
+Epoch: 34, Loss: 1.129072, Overall_val_acc (precision): 75.246918, total_acc1: 71.111115,total_acc2: 64.197533, total_acc3: 88.148155, total_acc4: 77.530869,                     avgf11: 0.580400, avgf12: 0.514857, avgf13: 0.771333, avgf14: 0.619400, Overall_avgf1: 0.621498
+Epoch: 34,best_precision: 75.617294,lowest_loss: 0.757417,best_avgf1: 0.633717
+train_start_time: 1755552988.0898407, train_end_time: 1755553279.075455, val_start_time: 1755553279.0759304, val_end_time: 1755553443.2826693
+train_time_use: 4.849760238329569 minutes, val_time_use: 2.736778982480367 minutes
+
+Epoch: 35, Loss: 0.294862, Overall_average_acc: 97.797256, total_acc1: 96.231430, total_acc2: 96.762215, total_acc3: 99.469223, total_acc4: 98.726120
+Epoch: 35, Loss: 1.087345, Overall_val_acc (precision): 74.506172, total_acc1: 69.629631,total_acc2: 66.913582, total_acc3: 87.160500, total_acc4: 74.320992,                     avgf11: 0.558400, avgf12: 0.565429, avgf13: 0.773333, avgf14: 0.645800, Overall_avgf1: 0.635740
+Epoch: 35,best_precision: 75.617294,lowest_loss: 0.757417,best_avgf1: 0.635740
+train_start_time: 1755553443.2829933, train_end_time: 1755553731.9577303, val_start_time: 1755553731.9583697, val_end_time: 1755553893.8909605
+train_time_use: 4.811245616277059 minutes, val_time_use: 2.698876512050629 minutes
+
+Epoch: 36, Loss: 0.237747, Overall_average_acc: 98.274956, total_acc1: 97.080681, total_acc2: 97.292999, total_acc3: 99.575378, total_acc4: 99.150749
+Epoch: 36, Loss: 1.124540, Overall_val_acc (precision): 75.185188, total_acc1: 70.617287,total_acc2: 65.185188, total_acc3: 87.407410, total_acc4: 77.530869,                     avgf11: 0.563200, avgf12: 0.519286, avgf13: 0.791667, avgf14: 0.636000, Overall_avgf1: 0.627538
+Epoch: 36,best_precision: 75.617294,lowest_loss: 0.757417,best_avgf1: 0.635740
+train_start_time: 1755553893.8912742, train_end_time: 1755554144.046086, val_start_time: 1755554144.0464838, val_end_time: 1755554341.499043
+train_time_use: 4.169246864318848 minutes, val_time_use: 3.290875987211863 minutes
+
+Epoch: 37, Loss: 0.215604, Overall_average_acc: 98.553619, total_acc1: 97.452232, total_acc2: 97.876862, total_acc3: 99.734612, total_acc4: 99.150749
+Epoch: 37, Loss: 1.185195, Overall_val_acc (precision): 75.185188, total_acc1: 68.888893,total_acc2: 66.666672, total_acc3: 87.160500, total_acc4: 78.024696,                     avgf11: 0.564200, avgf12: 0.572000, avgf13: 0.777000, avgf14: 0.611600, Overall_avgf1: 0.631200
+Epoch: 37,best_precision: 75.617294,lowest_loss: 0.757417,best_avgf1: 0.635740
+train_start_time: 1755554341.4994, train_end_time: 1755554635.3094053, val_start_time: 1755554635.309864, val_end_time: 1755554798.087522
+train_time_use: 4.896833423773447 minutes, val_time_use: 2.712960966428121 minutes
+
+Epoch: 38, Loss: 0.233042, Overall_average_acc: 98.155525, total_acc1: 97.399155, total_acc2: 96.974525, total_acc3: 99.363060, total_acc4: 98.885353
+Epoch: 38, Loss: 1.177398, Overall_val_acc (precision): 75.987656, total_acc1: 71.358025,total_acc2: 66.666672, total_acc3: 88.888893, total_acc4: 77.037041,                     avgf11: 0.568000, avgf12: 0.548714, avgf13: 0.799333, avgf14: 0.629400, Overall_avgf1: 0.636362
+Epoch: 38,best_precision: 75.987656,lowest_loss: 0.757417,best_avgf1: 0.636362
+train_start_time: 1755554798.0878105, train_end_time: 1755555053.4132, val_start_time: 1755555053.4137182, val_end_time: 1755555251.1267898
+train_time_use: 4.25542315642039 minutes, val_time_use: 3.2952178597450255 minutes
+
+Epoch: 39, Loss: 0.211978, Overall_average_acc: 98.434189, total_acc1: 97.876862, total_acc2: 97.080681, total_acc3: 99.469223, total_acc4: 99.309982
+Epoch: 39, Loss: 1.200981, Overall_val_acc (precision): 75.185188, total_acc1: 71.358025,total_acc2: 64.691360, total_acc3: 88.148155, total_acc4: 76.543213,                     avgf11: 0.566600, avgf12: 0.526143, avgf13: 0.795000, avgf14: 0.612800, Overall_avgf1: 0.625136
+Epoch: 39,best_precision: 75.987656,lowest_loss: 0.757417,best_avgf1: 0.636362
+train_start_time: 1755555253.233367, train_end_time: 1755555540.280423, val_start_time: 1755555540.280816, val_end_time: 1755555703.171242
+train_time_use: 4.784117599328359 minutes, val_time_use: 2.7148404320081077 minutes
+
+Epoch: 40, Loss: 0.192078, Overall_average_acc: 98.500534, total_acc1: 97.399155, total_acc2: 97.823784, total_acc3: 99.734612, total_acc4: 99.044594
+Epoch: 40, Loss: 1.235494, Overall_val_acc (precision): 73.827164, total_acc1: 69.135803,total_acc2: 63.703705, total_acc3: 86.172844, total_acc4: 76.296303,                     avgf11: 0.569200, avgf12: 0.495857, avgf13: 0.779333, avgf14: 0.597600, Overall_avgf1: 0.610498
+Epoch: 40,best_precision: 75.987656,lowest_loss: 0.757417,best_avgf1: 0.636362
+train_start_time: 1755555703.1717713, train_end_time: 1755555974.5723464, val_start_time: 1755555974.5728164, val_end_time: 1755556172.3136673
+train_time_use: 4.523342919349671 minutes, val_time_use: 3.295680848757426 minutes
+
+Epoch: 41, Loss: 0.194071, Overall_average_acc: 98.540344, total_acc1: 97.717628, total_acc2: 97.452232, total_acc3: 99.628456, total_acc4: 99.363060
+Epoch: 41, Loss: 1.234160, Overall_val_acc (precision): 74.938278, total_acc1: 70.123459,total_acc2: 65.185188, total_acc3: 87.407410, total_acc4: 77.037041,                     avgf11: 0.568200, avgf12: 0.557571, avgf13: 0.777667, avgf14: 0.606200, Overall_avgf1: 0.627410
+Epoch: 41,best_precision: 75.987656,lowest_loss: 0.757417,best_avgf1: 0.636362
+train_start_time: 1755556172.3141358, train_end_time: 1755556467.1542606, val_start_time: 1755556467.1547403, val_end_time: 1755556634.3822799
+train_time_use: 4.914002080758412 minutes, val_time_use: 2.787125658988953 minutes
+
+Epoch: 42, Loss: 0.154990, Overall_average_acc: 98.898628, total_acc1: 98.195335, total_acc2: 98.248413, total_acc3: 99.734612, total_acc4: 99.416138
+Epoch: 42, Loss: 1.156933, Overall_val_acc (precision): 74.938278, total_acc1: 68.148148,total_acc2: 67.160500, total_acc3: 86.913582, total_acc4: 77.530869,                     avgf11: 0.541000, avgf12: 0.548286, avgf13: 0.774667, avgf14: 0.649400, Overall_avgf1: 0.628338
+Epoch: 42,best_precision: 75.987656,lowest_loss: 0.757417,best_avgf1: 0.636362
+train_start_time: 1755556634.3826413, train_end_time: 1755556896.3690288, val_start_time: 1755556896.369519, val_end_time: 1755557093.5493853
+train_time_use: 4.3664397915204365 minutes, val_time_use: 3.2863311052322386 minutes
+
+Epoch: 43, Loss: 0.145153, Overall_average_acc: 99.044586, total_acc1: 97.876862, total_acc2: 98.673042, total_acc3: 99.893845, total_acc4: 99.734612
+Epoch: 43, Loss: 1.226015, Overall_val_acc (precision): 75.555557, total_acc1: 70.123459,total_acc2: 65.925926, total_acc3: 88.641983, total_acc4: 77.530869,                     avgf11: 0.565400, avgf12: 0.543000, avgf13: 0.799000, avgf14: 0.621800, Overall_avgf1: 0.632300
+Epoch: 43,best_precision: 75.987656,lowest_loss: 0.757417,best_avgf1: 0.636362
+train_start_time: 1755557094.4416127, train_end_time: 1755557392.3340492, val_start_time: 1755557392.334508, val_end_time: 1755557553.92844
+train_time_use: 4.9648739417394 minutes, val_time_use: 2.693232202529907 minutes
+
+Epoch: 44, Loss: 0.161355, Overall_average_acc: 99.084396, total_acc1: 98.248413, total_acc2: 98.460724, total_acc3: 99.893845, total_acc4: 99.734612
+Epoch: 44, Loss: 1.282425, Overall_val_acc (precision): 74.320984, total_acc1: 68.395065,total_acc2: 64.197533, total_acc3: 86.913582, total_acc4: 77.777779,                     avgf11: 0.572600, avgf12: 0.562429, avgf13: 0.769333, avgf14: 0.633400, Overall_avgf1: 0.634440
+Epoch: 44,best_precision: 75.987656,lowest_loss: 0.757417,best_avgf1: 0.636362
+train_start_time: 1755557553.9287517, train_end_time: 1755557843.1118402, val_start_time: 1755557843.1122704, val_end_time: 1755558040.9290652
+train_time_use: 4.819718142350514 minutes, val_time_use: 3.296946581204732 minutes
+
+Epoch: 45, Loss: 0.143392, Overall_average_acc: 98.978241, total_acc1: 98.673042, total_acc2: 97.876862, total_acc3: 99.787689, total_acc4: 99.575378
+Epoch: 45, Loss: 1.189352, Overall_val_acc (precision): 75.123459, total_acc1: 67.407410,total_acc2: 67.654327, total_acc3: 87.901237, total_acc4: 77.530869,                     avgf11: 0.552200, avgf12: 0.540429, avgf13: 0.800667, avgf14: 0.624800, Overall_avgf1: 0.629524
+Epoch: 45,best_precision: 75.987656,lowest_loss: 0.757417,best_avgf1: 0.636362
+train_start_time: 1755558040.9293606, train_end_time: 1755558330.4927464, val_start_time: 1755558330.4935737, val_end_time: 1755558527.8811338
+train_time_use: 4.8260564287503565 minutes, val_time_use: 3.2897926688194277 minutes
+
+Epoch: 39, Loss: 2.906859, Overall_average_acc: 78.569542, total_acc1: 70.859879, total_acc2: 78.397034, total_acc3: 83.811043, total_acc4: 81.210197
+Epoch: 39, Loss: 1.200770, Overall_val_acc (precision): 69.938278, total_acc1: 60.740742,total_acc2: 63.209881, total_acc3: 84.197533, total_acc4: 71.604942,                     avgf11: 0.513800, avgf12: 0.454143, avgf13: 0.655333, avgf14: 0.436400, Overall_avgf1: 0.514919
+Epoch: 39,best_precision: 75.987656,lowest_loss: 0.757417,best_avgf1: 0.636362
+train_start_time: 1755575564.6265905, train_end_time: 1755575850.8125582, val_start_time: 1755575850.8132267, val_end_time: 1755576032.1418827
+train_time_use: 4.7697661280632015 minutes, val_time_use: 3.0221442659695943 minutes
+
+Epoch: 40, Loss: 1.276927, Overall_average_acc: 88.707535, total_acc1: 84.235672, total_acc2: 86.995758, total_acc3: 92.675163, total_acc4: 90.923569
