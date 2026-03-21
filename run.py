@@ -22,7 +22,7 @@ from prettytable import PrettyTable
 from torch.optim import *
 from torchvision.transforms import *
 from Attention import BiLevelRoutingAttention,GLIBlock 
-from Fusion import DBME,ECAAttention
+from Fusion import DBME, ECAAttention
 
 # 设置 max_split_size_mb 为256MB
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'max_split_size_mb:512'
@@ -549,6 +549,7 @@ def HVAttention(pretrained=False, **kwargs):
     model = AxialAttentionNet(AxialBlock, [1, 2, 4, 1], s=0.5, **kwargs)
     return model
 
+
 class TotalNet(nn.Module):
     def __init__(self):
         super(TotalNet, self).__init__()
@@ -571,17 +572,14 @@ class TotalNet(nn.Module):
 
         self.avg_pool = nn.AdaptiveAvgPool2d(1)
 
-        # DBME modules
         self.aff_module_for_people_scenes = DBME(channels=512)
         self.aff_module_for_fused_points = DBME(channels=512)
 
-        # ECAAttention layers for channel attention
         self.channel_att1 = ECAAttention(512, 8)
         self.channel_att2 = ECAAttention(512, 8)
         self.channel_att3 = ECAAttention(512, 8)
         self.channel_att4 = ECAAttention(512, 8)
 
-        # Fully connected layers for additional outputs
         self.fc1 = nn.Linear(512, 5)
         self.fc2 = nn.Linear(512, 7)
         self.fc3 = nn.Linear(512, 3)
@@ -592,7 +590,6 @@ class TotalNet(nn.Module):
         self.fc33 = nn.Linear(512, 3)
         self.fc44 = nn.Linear(512, 5)
 
-        # Weights for combining outputs
         self.weight1 = nn.Parameter(torch.tensor(0.5))
         self.weight2 = nn.Parameter(torch.tensor(0.5))
         self.weight3 = nn.Parameter(torch.tensor(0.5))
@@ -619,24 +616,20 @@ class TotalNet(nn.Module):
 
         x_all = x_people + x_scenes + x_points
 
-        # Apply ECAAttention to the combined features
         x1 = self.channel_att1(x_all)
         x2 = self.channel_att2(x_all)
         x3 = self.channel_att3(x_all)
         x4 = self.channel_att4(x_all)
 
-        # Fuse with the original fused final feature
         x_fused_people_scenes = self.aff_module_for_people_scenes(x_people, x_scenes)
         x_fused_final = self.aff_module_for_fused_points(x_fused_people_scenes, x_points)
         x_fused_final = self.avg_pool(x_fused_final).view(x_fused_final.size(0), -1)
 
-        # Apply average pooling to ECA-attended features
         x_1 = self.avg_pool(x1).view(x1.size(0), -1)
         x_2 = self.avg_pool(x2).view(x2.size(0), -1)
         x_3 = self.avg_pool(x3).view(x3.size(0), -1)
         x_4 = self.avg_pool(x4).view(x4.size(0), -1)
 
-        # Apply fully connected layers to get initial outputs
         out01 = self.fc1(x_fused_final)
         out02 = self.fc2(x_fused_final)
         out03 = self.fc3(x_fused_final)
@@ -647,7 +640,6 @@ class TotalNet(nn.Module):
         out33 = self.fc33(x_3)
         out44 = self.fc44(x_4)
 
-        # Weighted combination of initial and ECA-attended outputs
         out1 = torch.sigmoid(self.weight1) * out01 + (1 - torch.sigmoid(self.weight1)) * out11
         out2 = torch.sigmoid(self.weight2) * out02 + (1 - torch.sigmoid(self.weight2)) * out22
         out3 = torch.sigmoid(self.weight3) * out03 + (1 - torch.sigmoid(self.weight3)) * out33
@@ -1425,7 +1417,6 @@ def main(use_cuda=True, EPOCHS=100, batch_size=48):
 
                 # 将输入图像传递到模型(前向传播)
                 out1, out2, out3, out4 = model(img1,img2,img3,img4,face,body,gesture,posture)
-               
 
                 loss1 = crossEntropy1(out1, emotion_label)
                 # print(out2.shape, behavior_label.shape)
@@ -1701,7 +1692,6 @@ def test(use_cuda=True, batch_size=16, model_name=best_path):
 
             # 将输入图像传递到模型(前向传播)
             out1, out2, out3, out4 = model(img1,img2,img3,img4,face,body,gesture,posture)
-
 
             # Calculate accuracy
             out1 = F.softmax(out1, 1)
